@@ -3,6 +3,7 @@ import { Sora, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingContactButtons from "@/components/FloatingContactButtons";
 import RoadProgress from "@/components/RoadProgress";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RoadProgress />
         <Navbar />
         {children}
+        <FloatingContactButtons />
         <Footer />
       </body>
     </html>

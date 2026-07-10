@@ -1,12 +1,11 @@
 # Premier Driving School Kenya
 
-A premium, animated marketing website for a fictional Kenyan driving school, built with Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion, GSAP, Lenis smooth scroll, Swiper, and EmailJS.
+A premium, animated marketing website for a fictional Kenyan driving school, built with Next.js 15 (App Router), TypeScript, Tailwind CSS, Framer Motion, GSAP, Lenis smooth scroll, Swiper, and Formspree.
 
 ## Getting started
 
 ```bash
 npm install
-cp .env.local.example .env.local   # then fill in your EmailJS keys
 npm run dev
 ```
 
@@ -22,13 +21,12 @@ app/
   branches/page.tsx     Branches page
   gallery/page.tsx      Gallery page (masonry + lightbox + filters)
   about/page.tsx        About page
-  contact/page.tsx      Contact / apply page (EmailJS form)
+  contact/page.tsx      Contact / apply page (Formspree form)
 components/            Shared UI: Navbar, Footer, Hero, Stats, WhyChooseUs,
                         CoursesPreview, Testimonials, BranchesPreview, CTA,
                         RoadProgress (signature scroll indicator)
 lib/
   data.ts               Courses, branches, testimonials, stats content
-  emailjs.ts            EmailJS send helper
   useLenis.ts            Lenis smooth-scroll hook
 ```
 
@@ -49,5 +47,4 @@ license-free photography before launch.
 ## Deploying
 
 This is a standard Next.js app — deploy to Vercel, Netlify, or any Node host.
-Remember to set the three `NEXT_PUBLIC_EMAILJS_*` environment variables in your
-hosting provider's dashboard.
+

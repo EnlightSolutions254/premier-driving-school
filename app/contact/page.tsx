@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { courses, branches } from "@/lib/data";
-import { sendInquiry } from "@/lib/emailjs";
 
 type Status = "idle" | "sending" | "sent" | "error";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdarqope";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<Status>("idle");
@@ -23,7 +24,25 @@ export default function ContactPage() {
     setStatus("sending");
     setErrorMsg("");
     try {
-      await sendInquiry(form);
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: form.fullName,
+          phone: form.phone,
+          email: form.email,
+          course: form.course,
+          branch: form.branch,
+          message: form.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("We could not send your inquiry. Please try again or call 0111 333 599.");
+      }
       setStatus("sent");
     } catch (err) {
       setStatus("error");
