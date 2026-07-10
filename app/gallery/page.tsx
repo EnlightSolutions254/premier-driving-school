@@ -9,13 +9,25 @@ const categories = ["All", "Lessons", "Vehicles", "Graduation", "Instructors", "
 
 const gallery = [
   { src: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=900&auto=format&fit=crop", cat: "Lessons", alt: "Student practicing behind the wheel" },
-  { src: "https://images.unsplash.com/photo-1601929095185-cfb2e3ee2e0e?q=80&w=900&auto=format&fit=crop", cat: "Vehicles", alt: "Modern training truck" },
+  {
+  src: "/images/gallery/vehicles/truck.png",
+  cat: "Vehicles",
+  alt: "Modern training truck",
+},
   { src: "https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=900&auto=format&fit=crop", cat: "Graduation", alt: "Graduation ceremony" },
   { src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=900&auto=format&fit=crop", cat: "Lessons", alt: "PSV driving lesson" },
   { src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=900&auto=format&fit=crop", cat: "Instructors", alt: "Driving instructor portrait" },
-  { src: "https://images.unsplash.com/photo-1580746738099-89cffa1c6478?q=80&w=900&auto=format&fit=crop", cat: "Classroom", alt: "Classroom theory session" },
-  { src: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=900&auto=format&fit=crop", cat: "Lessons", alt: "Motorcycle riding lesson" },
-  { src: "https://images.unsplash.com/photo-1611348586804-61bf6c080437?q=80&w=900&auto=format&fit=crop", cat: "Vehicles", alt: "Driving school branch vehicles" },
+{
+  src: "/images/gallery/classroom/theory-session-1.png",
+  cat: "Classroom",
+  alt: "Classroom theory session",
+},
+{ src: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=900&auto=format&fit=crop", cat: "Lessons", alt: "Motorcycle riding lesson" },
+  {
+  src: "/images/gallery/vehicles/fleet.png",
+  cat: "Vehicles",
+  alt: "Driving school branch vehicles",
+},
   { src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=900&auto=format&fit=crop", cat: "Graduation", alt: "Student receiving certificate" },
 ];
 
